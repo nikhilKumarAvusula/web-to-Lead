@@ -27,7 +27,15 @@ input{
     
 }
 form{
-    margin: 50px 300px ;
+    max-width: 500px;
+    min-width: 300px;
+    margin: auto;
     border: 2px solid black;
     padding: 10px;
+}
+
+.g-recaptcha{
+    margin: 50px auto 15px auto;
+    display: flex;
+    justify-content: center;
 }
