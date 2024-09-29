@@ -1,6 +1,7 @@
 let captachChecked = false;
 function handleSubmit(event){
 if(captachChecked){
+    console.log('checked or not '+ captachChecked);
     let inputValue = document.querySelector(".inputValue");
     let outPutValue = document.querySelector(".outputValue");
 
