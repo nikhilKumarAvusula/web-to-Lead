@@ -1,5 +1,5 @@
 let captachChecked = false;
-function handleSubmit(){
+function handleSubmit(event){
 if(captachChecked){
     let inputValue = document.querySelector(".inputValue");
     let outPutValue = document.querySelector(".outputValue");
@@ -9,6 +9,7 @@ if(captachChecked){
     outPutValue.value = formattedDate;
 } else{
     alert("Please fill recaptcha");
+    event.preventDefault();
 }
     
 }
