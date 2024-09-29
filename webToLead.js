@@ -1,18 +1,19 @@
 let captachChecked = false;
 function handleSubmit(event){
     console.log('checked or not '+ captachChecked);
-if(captachChecked){
-    
-    let inputValue = document.querySelector(".inputValue");
-    let outPutValue = document.querySelector(".outputValue");
+    if(captachChecked){
+        
+        let inputValue = document.querySelector(".inputValue");
+        let outPutValue = document.querySelector(".outputValue");
 
-    let formattedDate = new Date(inputValue.value).toLocaleString("en-IN");
-  
-    outPutValue.value = formattedDate;
-} else{
-    alert("Please fill recaptcha");
-    event.preventDefault();
-}
+        let formattedDate = new Date(inputValue.value).toLocaleString("en-IN");
+    
+        outPutValue.value = formattedDate;
+        
+    } else{
+        alert("Please fill recaptcha");
+        event.preventDefault();
+    }
     
 }
 
