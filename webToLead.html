@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webToLead.css">
+    <script src="webToLead.js"></script>
+</head>
+<body>
+<h1>Create Lead</h1>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5j00000B8ylY" method="POST">
+    
+    <input type=hidden name="oid" value="00D5j00000B8ylY">
+    <input type=hidden name="Lead_date__c" class ="outputValue">
+    <input type=hidden name="retURL" value="https://nikhil-my-dev-ed.lightning.force.com/lightning/o/Lead/list?filterName=__Recent">
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail"                                  -->
+    <!--  value="nikhilkumaravusula@gmail.com">                                   -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br>
+    
+    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true" /><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" required="true" /><br>
+    
+    <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" required="true" /><br>
+
+    <label for="first_name">Lead Date</label><input  type="Date" required="true" class = "inputValue" /><br>
+    
+    <input type="submit" class ="submit" name="submit" onsubmit="handleSubmit()">
+    
+    </form>
+    
+</body>
+</html>
