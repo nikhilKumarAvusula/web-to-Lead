@@ -1,4 +1,5 @@
 let captachChecked = false;
+let buttonDisable = true;
 function handleSubmit(event){
     console.log('checked or not '+ captachChecked);
     if(captachChecked){
@@ -9,7 +10,7 @@ function handleSubmit(event){
         let formattedDate = new Date(inputValue.value).toLocaleString("en-IN");
     
         outPutValue.value = formattedDate;
-        
+
     } else{
         alert("Please fill recaptcha");
         event.preventDefault();
@@ -29,4 +30,5 @@ function timestamp(){
      
 function callbackSuccess(){
     captachChecked= true;
+    buttonDisable = false;
 }
